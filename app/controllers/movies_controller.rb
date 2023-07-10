@@ -23,4 +23,30 @@ class MoviesController < ApplicationController
     )
     render :show
   end
+
+  def show
+    @movie = Movie.find_by(id: params[:id])
+    render :show
+  end
+  
+  def update
+    @movie = Movie.find_by(id: params[:id])
+    @movie.update(
+      title: params[:title] || @movie.title,
+      year: params[:year] || @movie.year,
+      rated: params[:rated] || @movie.rated,
+      released: params[:released] || @movie.released,
+      runtime: params[:runtime] || @movie.runtime,
+      genre: params[:genre] || @movie.genre,
+      director: params[:director] || @movie.director,
+      writer: params[:writer] || @movie.writer,
+      actors: params[:actors] || @movie.actors,
+      plot: params[:plot] || @movie.plot,
+      language: params[:language] || @movie.langauge,
+      country: params[:country] || @movie.country,
+      awards: params[:awards] || @movie.awards,
+      poster: params[:poster] || @movie.poster,
+    )
+    render :show
+  end
 end

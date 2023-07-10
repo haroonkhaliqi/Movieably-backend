@@ -8,4 +8,10 @@ Rails.application.routes.draw do
   get "movies/:id" => "movies#show"
   patch "/movies/:id" => "movies#update"
   delete "/movies/:id" => "movies#destroy"
+
+  get "/favorites" => "favorites#index"
+  post "/favorites" => "favorites#create"
+  get "favorites/:id" => "favorites#show"
+  patch "/favorites/:id" => "favorites#update"
+  delete "/favorites/:id" => "favorites#destroy"
 end

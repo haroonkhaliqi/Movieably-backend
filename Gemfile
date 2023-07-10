@@ -7,6 +7,7 @@ ruby "3.1.1"
 gem "rails", "~> 7.0.6"
 gem 'bcrypt', '~> 3.1.7'
 gem 'jwt'
+gem 'rack-cors'
 
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]

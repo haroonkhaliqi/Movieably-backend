@@ -3,15 +3,18 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  get "/movies" => "movies#index"
-  post "/movies" => "movies#create"
-  get "movies/:id" => "movies#show"
-  patch "/movies/:id" => "movies#update"
-  delete "/movies/:id" => "movies#destroy"
+  post "/user" => "users#create"
+  post "/sessions" => "sessions#create"
 
-  get "/favorites" => "favorites#index"
+  get "/movies" => "movies#index"
+  # post "/movies" => "movies#create"
+  # get "movies/:id" => "movies#show"
+  # patch "/movies/:id" => "movies#update"
+  # delete "/movies/:id" => "movies#destroy"
+
+  # get "/favorites" => "favorites#index"
   post "/favorites" => "favorites#create"
-  get "favorites/:id" => "favorites#show"
-  patch "/favorites/:id" => "favorites#update"
+  # get "favorites/:id" => "favorites#show"
+  # patch "/favorites/:id" => "favorites#update"
   delete "/favorites/:id" => "favorites#destroy"
 end
